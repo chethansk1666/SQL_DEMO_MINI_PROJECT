@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="Update User"
         android:id="@+id/button"
+        android:onClick="userUpdate"
         />
 
 </LinearLayout>

@@ -23,11 +23,11 @@ public class deleteActivity extends AppCompatActivity {
         userName = (EditText) findViewById(R.id.username);
 
     }
-    public void userDelete(View view) {
+    public void DeleteUser(View view) {
         dbHelper = new DBHelper(deleteActivity.this,DBNAME,null,DBVERSION);
         dbHelper.deleteUser(userName.getText().toString());
         Toast.makeText(this, "Deletion Successful", Toast.LENGTH_LONG).show();
-        Intent i = new Intent(deleteActivity.this,All_features.class);
+        Intent i = new Intent(deleteActivity.this,Loginorregister.class);
         startActivity(i);
     }
 }

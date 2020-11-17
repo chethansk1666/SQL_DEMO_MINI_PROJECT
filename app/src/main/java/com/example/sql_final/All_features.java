@@ -8,23 +8,23 @@ import android.view.View;
 import android.widget.Button;
 
 public class All_features extends AppCompatActivity {
-    Button register, delete, update, display ;
-    Intent intent ;
+    Button register, delete, update, display;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_features);
 
-        register = findViewById(R.id.register) ;
-        delete = findViewById(R.id.delete) ;
-        update = findViewById(R.id.update) ;
-        display = findViewById(R.id.display) ;
+        register = findViewById(R.id.register);
+        delete = findViewById(R.id.delete);
+        update = findViewById(R.id.update);
+        display = findViewById(R.id.display);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(All_features.this,AddUser.class) ;
+                intent = new Intent(All_features.this, AddUser.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +32,7 @@ public class All_features extends AppCompatActivity {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it=new Intent(All_features.this,deleteActivity.class);
+                Intent it = new Intent(All_features.this, deleteActivity.class);
                 startActivity(it);
             }
         });
@@ -40,7 +40,7 @@ public class All_features extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(All_features.this, UpdatePage.class) ;
+                intent = new Intent(All_features.this, UpdatePage.class);
                 startActivity(intent);
             }
         });

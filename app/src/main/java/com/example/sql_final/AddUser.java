@@ -32,7 +32,7 @@ public class AddUser extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Insert Successful", Toast.LENGTH_LONG).show();
         }
-        Intent i = new Intent(AddUser.this, All_features.class);
+        Intent i = new Intent(AddUser.this, Loginorregister.class);
         startActivity(i);
     }
 }

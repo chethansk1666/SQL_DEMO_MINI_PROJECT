@@ -10,12 +10,13 @@ import android.widget.Toast;
 
 public class UpdatePage extends AppCompatActivity {
 
-    EditText userName,passWord;
+    EditText userName, passWord;
     DBHelper dbHelper;
 
     public static final String DBNAME = "userdb";
     public static final String TBNAME = "users";
     public static final int DBVERSION = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +25,12 @@ public class UpdatePage extends AppCompatActivity {
         passWord = (EditText) findViewById(R.id.psw);
 
     }
+
     public void userUpdate(View view) {
-        dbHelper = new DBHelper(UpdatePage.this,DBNAME,null,DBVERSION);
-        dbHelper.updateUser(userName.getText().toString(),passWord.getText().toString());
+        dbHelper = new DBHelper(UpdatePage.this, DBNAME, null, DBVERSION);
+        dbHelper.updateUser(userName.getText().toString(), passWord.getText().toString());
         Toast.makeText(this, "Updation Successful", Toast.LENGTH_LONG).show();
-        Intent i = new Intent(UpdatePage.this,All_features.class);
+        Intent i = new Intent(UpdatePage.this, Loginorregister.class);
         startActivity(i);
     }
 }
