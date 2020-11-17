@@ -28,8 +28,6 @@
         android:text="Submit"
         android:id="@+id/submit"
         android:onClick="goToFeatures"
-
         />
-
 
 </LinearLayout>

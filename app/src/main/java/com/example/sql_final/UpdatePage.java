@@ -30,7 +30,7 @@ public class UpdatePage extends AppCompatActivity {
         dbHelper = new DBHelper(UpdatePage.this, DBNAME, null, DBVERSION);
         dbHelper.updateUser(userName.getText().toString(), passWord.getText().toString());
         Toast.makeText(this, "Updation Successful", Toast.LENGTH_LONG).show();
-        Intent i = new Intent(UpdatePage.this, Loginorregister.class);
+        Intent i = new Intent(UpdatePage.this, check_user.class);
         startActivity(i);
     }
 }
